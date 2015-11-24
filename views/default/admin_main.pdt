@@ -29,6 +29,9 @@
 						<input type="text" name="subject" value="" id="subject">
 					</li>
 					<li>
+						<div class="accent_box" style="margin-bottom: 10px;">
+							{contact.first_name} {contact.last_name} {contact.title} {contact.company} {contact.email} {contact.address1} {contact.address2} {contact.city} {contact.state} {contact.zip}
+						</div>
 						<div class="tab_content">
 							<ul class="tabs">
 								<li class="current" id="html">
