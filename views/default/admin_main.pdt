@@ -17,25 +17,25 @@
 			<div class="pad">
 				<ul>
 					<li>
-						<label for="from_name">From Name</label>
+						<label for="from_name"><?php $this->_("MassMailerPlugin.admin_forms.from_name");?></label>
 						<input type="text" name="from_name" value="<?php echo $this->Html->safe($system_company->name); ?>" id="from_name">
 					</li>
 					<li>
-						<label for="from">From Email</label>
+						<label for="from"><?php $this->_("MassMailerPlugin.admin_forms.from_email");?></label>
 						<input type="text" name="from" value="no-reply@<?php echo $this->Html->safe($system_company->hostname); ?>" id="from">
 					</li>
 					<li>
-						<label for="subject">Subject</label>
+						<label for="subject"><?php $this->_("MassMailerPlugin.admin_forms.subject");?></label>
 						<input type="text" name="subject" value="" id="subject">
 					</li>
 					<li>
 						<div class="tab_content">
 							<ul class="tabs">
 								<li class="current" id="html">
-									<a href="#"><label for="html">HTML</label></a>
+									<a href="#"><label for="html"><?php $this->_("MassMailerPlugin.admin_forms.html");?></label></a>
 								</li>
 								<li id="text">
-									<a href="#"><label for="text">Text</label></a>
+									<a href="#"><label for="text"><?php $this->_("MassMailerPlugin.admin_forms.text");?></label></a>
 								</li>
 							</ul>
 							<div class="inner_content">
@@ -45,7 +45,7 @@
 					</li>
 				</ul>
 				<div class="button_row">
-					<a class="btn_right submit" href="#" style="margin-bottom: 13px;">Send Email</a>
+					<a class="btn_right submit" href="#" style="margin-bottom: 13px;"><?php $this->_("MassMailerPlugin.admin_forms.send_email");?></a>
 				</div>
 			</div>
 		</div>
