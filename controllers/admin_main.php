@@ -30,6 +30,9 @@ class AdminMain extends AppController {
 	 * Index
 	 */
 	public function index() {
+		//Load Language
+		Language::loadLang("mass_mailer_plugin", null, PLUGINDIR . "mass_mailer" . DS . "language" . DS);
+
 		if(!empty($_POST['from_name']) && count(explode('@', $_POST['from'])) > 0 && !empty($_POST['subject']) && !empty($_POST['mail'])){
 			//Load Components
 			if (!isset($this->Record))
