@@ -32,7 +32,7 @@
 						<div class="tab_content">
 							<ul class="tabs">
 								<li class="current" id="html">
-									<a href="#"><label for="html"><?php $this->_("MassMailerPlugin.admin_forms.html");?></label></a>
+									<a href="#"><label for="html"><?php $this->_("MassMailerPlugin.admin_forms.HTML");?></label></a>
 								</li>
 								<li id="text">
 									<a href="#"><label for="text"><?php $this->_("MassMailerPlugin.admin_forms.text");?></label></a>
