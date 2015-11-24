@@ -6,4 +6,6 @@ $lang['MassMailerPlugin.admin_forms.subject'] = "Subject";
 $lang['MassMailerPlugin.admin_forms.HTML'] = "HTML";
 $lang['MassMailerPlugin.admin_forms.text'] = "Text";
 $lang['MassMailerPlugin.admin_forms.send_email'] = "Send Email";
+$lang['MassMailerPlugin.admin_forms.lang_filter'] = "Language Filter";
+$lang['MassMailerPlugin.admin_forms.success'] = "All emails are sent.";
 ?>

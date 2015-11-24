@@ -2,9 +2,7 @@
 		<section class="error_section">
 			<article class="error_box">
 				<a href="#" class="close">×</a>
-				<?php foreach($log as $entry){ ?>
-				<p><?= $entry; ?></p>
-				<?php } ?>
+				<p><?php $this->_("MassMailerPlugin.admin_forms.success");?></p>
 			</article>
 		</section>
 		<?php } ?>
@@ -27,6 +25,10 @@
 					<li>
 						<label for="subject"><?php $this->_("MassMailerPlugin.admin_forms.subject");?></label>
 						<input type="text" name="subject" value="" id="subject">
+					</li>
+					<li>
+						<label for="subject"><?php $this->_("MassMailerPlugin.admin_forms.lang_filter");?></label>
+						<?php $this->Form->fieldSelect('filter', $lang_filter); ?>
 					</li>
 					<li>
 						<div class="accent_box" style="margin-bottom: 10px;">
