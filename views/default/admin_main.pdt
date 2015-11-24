@@ -1,0 +1,107 @@
+		<?php if(!empty($log)){ ?>
+		<section class="error_section">
+			<article class="error_box">
+				<a href="#" class="close">×</a>
+				<?php foreach($log as $entry){ ?>
+				<p><?= $entry; ?></p>
+				<?php } ?>
+			</article>
+		</section>
+		<?php } ?>
+		<?php
+		$this->Widget->clear();
+		$this->Widget->create($this->_("AdminMain.index.boxtitle", true));
+		$this->Form->create();
+		?>
+		<div class="inner">
+			<div class="pad">
+				<ul>
+					<li>
+						<label for="from_name">From Name</label>
+						<input type="text" name="from_name" value="<?php echo $this->Html->safe($system_company->name); ?>" id="from_name">
+					</li>
+					<li>
+						<label for="from">From Email</label>
+						<input type="text" name="from" value="no-reply@<?php echo $this->Html->safe($system_company->hostname); ?>" id="from">
+					</li>
+					<li>
+						<label for="subject">Subject</label>
+						<input type="text" name="subject" value="" id="subject">
+					</li>
+					<li>
+						<div class="tab_content">
+							<ul class="tabs">
+								<li class="current" id="html">
+									<a href="#"><label for="html">HTML</label></a>
+								</li>
+								<li id="text">
+									<a href="#"><label for="text">Text</label></a>
+								</li>
+							</ul>
+							<div class="inner_content">
+								<?php $this->Form->fieldTextarea('mail', null, array('id'=>'emailtxt', 'class'=>'tinymce')); ?>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="button_row">
+					<a class="btn_right submit" href="#" style="margin-bottom: 13px;">Send Email</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+
+		<!-- Scripts -->
+		<script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
+		<script type="text/javascript">
+		tinymce.init({
+		    selector: ".tinymce",
+		    theme: "modern",
+		    plugins: [
+		        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+		        "searchreplace wordcount visualblocks visualchars code fullscreen",
+		        "insertdatetime media nonbreaking save table contextmenu directionality",
+		        "emoticons template paste textcolor colorpicker textpattern imagetools"
+		    ],
+		    toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+		    toolbar2: "print preview media | forecolor backcolor emoticons",
+		    image_advtab: true,
+		    templates: [
+		        {title: 'Test template 1', content: 'Test 1'},
+		        {title: 'Test template 2', content: 'Test 2'}
+		    ]
+		});
+		</script>
+		<script>
+			$('#html').click(function(){
+				$('#text').removeClass('current');
+				$(this).addClass('current');
+				tinymce.init({
+				    selector: ".tinymce",
+				    theme: "modern",
+				    plugins: [
+				        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+				        "searchreplace wordcount visualblocks visualchars code fullscreen",
+				        "insertdatetime media nonbreaking save table contextmenu directionality",
+				        "emoticons template paste textcolor colorpicker textpattern imagetools"
+				    ],
+				    toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+				    toolbar2: "print preview media | forecolor backcolor emoticons",
+				    image_advtab: true,
+				    templates: [
+				        {title: 'Test template 1', content: 'Test 1'},
+				        {title: 'Test template 2', content: 'Test 2'}
+				    ]
+				});
+			});
+			$('#text').click(function(){
+				$('#html').removeClass('current');
+				$(this).addClass('current');
+				tinymce.remove("#emailtxt");
+			});
+		</script>
+
+		<?php
+		$this->Form->end();
+		$this->Widget->end();
+		?>

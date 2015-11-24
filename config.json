@@ -1,0 +1,11 @@
+{
+	"version": "1.0",
+	"name": "Mass Mailer",
+	"description": "Send newsletters and mass mails to all your clients.",
+	"authors": [
+		{
+			"name": "CyanDark, Inc.",
+			"url": "http://www.cyandark.com"
+		}
+	]
+}
